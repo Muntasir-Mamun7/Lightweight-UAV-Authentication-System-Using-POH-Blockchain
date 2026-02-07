@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.7)  7 FEB 2026 21:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.7)  7 FEB 2026 21:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -325,63 +325,93 @@ File: Fig/Fig5.png Graphic file (type png)
 Package pdftex.def Info: Fig/Fig5.png  used on input line 378.
 (pdftex.def)             Requested size: 390.0pt x 212.71605pt.
 
-Overfull \hbox (22.79137pt too wide) in paragraph at lines 403--420
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
+[]\T1/cmr/m/n/10.95 Computational
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--414
+[]\T1/cmr/m/n/10.95 Single Point of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
+[]\T1/cmr/m/n/10.95 Throughput
+ []
+
+
+Underfull \hbox (badness 2418) in paragraph at lines 418--418
+[]\T1/cmr/m/n/10.95 Energy Con-sump-
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13 <./Fig/Fig5.png (PNG copy)>] [14]
-Overfull \hbox (2.4411pt too wide) in paragraph at lines 445--446
+Overfull \hbox (2.4411pt too wide) in paragraph at lines 446--447
 \T1/cmr/m/n/12 sur-ance au-di-tors). These en-ti-ties main-tain lightweight ver
 -i-fi-ca-tion nodes
  []
 
-[15]
-Overfull \hbox (5.1132pt too wide) in paragraph at lines 464--465
-\T1/cmr/m/n/12 tives (e.g., SPHINCS+) would future-proof against emerg-ing quan
--tum threats.
+[15] [16] [17]
+Overfull \hbox (4.14256pt too wide) in paragraph at lines 483--484
+\T1/cmr/m/n/12 teleme-try logs, which at-tack-ers might ma-nip-u-late be-fore a
+nal-y-sis, PoH-verified
  []
 
-[16]
-Overfull \hbox (5.70055pt too wide) in paragraph at lines 476--477
+
+Overfull \hbox (6.02148pt too wide) in paragraph at lines 487--488
+[]\T1/cmr/m/n/12 Current ECC-based sig-na-ture schemes (ECDSA) and hash func-ti
+ons (SHA-
+ []
+
+
+Overfull \hbox (16.72966pt too wide) in paragraph at lines 487--488
+\T1/cmr/m/n/12 (SPHINCS+) sig-na-tures that re-sist quan-tum crypt-anal-y-sis, 
+eval-u-at-ing quantum-
+ []
+
+[18]
+Overfull \hbox (5.70055pt too wide) in paragraph at lines 503--504
 \T1/cmr/m/n/12 graph-i-cally unim-peach-able flight record em-bed-ded in its di
 g-i-tal DNA. Whether
  []
 
-[17] [18] [19] [20] (./elsarticle-template-num.aux)
+[19] [20] [21] [22] (./elsarticle-template-num.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4640 strings out of 476182
- 67846 string characters out of 5795596
- 1933975 words of memory out of 5000000
- 26578 multiletter control sequences out of 15000+600000
- 569335 words of font info for 64 fonts, out of 8000000 for 9000
+ 4650 strings out of 476182
+ 67996 string characters out of 5795596
+ 1934975 words of memory out of 5000000
+ 26586 multiletter control sequences out of 15000+600000
+ 572435 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,9n,79p,1133b,297s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.60
-0pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.
-600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti120
-0.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1
-000.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
-m1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/t
-crm1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecbx1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on elsarticle-template-num.pdf (22 pages, 2180595 bytes).
+ 72i,10n,79p,1133b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.60
+0pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.
+600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt120
+0.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1
+000.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ect
+i1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+cti1000.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecrm1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/
+ec/tcrm1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecbx1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on elsarticle-template-num.pdf (24 pages, 2214198 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 564 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

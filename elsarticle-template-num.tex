@@ -398,9 +398,10 @@ To contextualize our system's performance, we conducted a comparative analysis a
 
 \begin{table}[h]
 \centering
+\small
 \caption{Performance Comparison Across Authentication Architectures}
 \label{tab:comparison}
-\begin{tabular}{|l|c|c|c|}
+\begin{tabular}{|p{3.2cm}|c|c|c|}
 \hline
 \textbf{Metric} & \textbf{Centralized} & \textbf{PoW Blockchain} & \textbf{PoH (Ours)} \\
 \hline
@@ -459,9 +460,35 @@ Real-world UAV operations rely on established software ecosystems (PX4, ArduPilo
 
 While our implementation demonstrates core principles, several limitations merit acknowledgment. All experiments were conducted in AirSim simulation; real-world deployment must address RF propagation, hardware failures, and environmental conditions. The prototype assumes a single GCS; multi-GCS scenarios require distributed PoH chain extensions. Robust fault recovery mechanisms and comprehensive forensic analysis tools remain essential for production deployment. Additionally, resource-constrained edge scenarios might benefit from adaptive PoH that dynamically adjusts hashing frequency based on available resources.
 
+\subsection{Economic and Operational Considerations}
+
+Beyond technical feasibility, widespread PoH adoption depends on economic incentives and operational practicality. Deploying PoH-based authentication involves several cost factors including initial development integration costs (\$50,000 to \$200,000), minimal computational resources (less than 5\% CPU utilization and 200 MB RAM), and negligible storage overhead (approximately 256 bytes per block). Offsetting these costs are potential benefits such as regulatory compliance satisfaction, liability reduction through cryptographically verifiable logs potentially reducing insurance premiums by 10--15\%, and enhanced trust enabling premium pricing for verified services.
+
+Successful deployment requires seamless integration into existing UAV operational workflows. Key design principles include transparent background operation where PoH hashing occurs without affecting pilot interfaces, graceful degradation ensuring safety-critical functions remain operational if the PoH engine fails, and audit accessibility presenting hash chain validation results in human-readable formats rather than raw cryptographic hashes.
+
+\subsection{Ethical and Societal Implications}
+
+The deployment of tamper-evident telemetry logging in UAV systems raises important ethical considerations. While PoH enhances accountability by preventing operators from retroactively altering flight records, it also creates permanent, immutable surveillance data. This duality requires policy frameworks governing who can access PoH ledgers and under what circumstances. In commercial UAV operations, questions arise about ledger ownership and data control, requiring clear contractual agreements and legal standards defining access rights, retention policies, and subpoena compliance. These questions extend beyond technical implementation and require interdisciplinary collaboration among engineers, legal scholars, ethicists, and policymakers.
+
 \section{Future Work}
 
-Several promising research directions emerge from this foundation. Extending the single-node PoH architecture to a decentralized network with multiple Ground Control Stations could enhance resilience through cross-validation, potentially using Directed Acyclic Graph (DAG) structures. The immutable PoH ledger provides trustworthy datasets for AI-driven anomaly detection, enabling predictive security alerts for GPS spoofing or unauthorized trajectory deviations. Migrating to post-quantum cryptographic primitives (e.g., SPHINCS+) would future-proof against emerging quantum threats. The PoH authentication model also generalizes beyond UAVs to autonomous vehicles, industrial IoT, and medical devices. Finally, collaborating with aviation authorities (FAA, EASA, ICAO) for pilot studies would accelerate regulatory acceptance and industry adoption.
+Several promising research directions emerge from this foundation, each addressing distinct challenges in UAV security and blockchain scalability.
+
+\subsection{Decentralized PoH Networks}
+
+Extending the single-node PoH architecture to a decentralized network with multiple Ground Control Stations (GCS) presents exciting opportunities for enhanced resilience and cross-validation. In a distributed PoH system, each GCS maintains its own sequential hash chain while periodically synchronizing with peer nodes to verify consistency. This architecture could leverage Directed Acyclic Graph (DAG) structures to enable parallel processing of telemetry streams without sacrificing the temporal ordering guarantees that make PoH valuable. Potential approaches include gossiping protocols where each GCS broadcasts its latest PoH block headers to neighboring nodes, Byzantine Fault Tolerance implementations using lightweight BFT variants (e.g., PBFT, HotStuff), and hierarchical timestamping with designated time authority nodes.
+
+\subsection{AI-Driven Anomaly Detection}
+
+The immutable PoH ledger provides high-integrity datasets ideal for training machine learning models to detect security threats. Unlike traditional telemetry logs, which attackers might manipulate before analysis, PoH-verified data guarantees historical authenticity. This enables deployment of AI-driven anomaly detection systems for GPS spoofing detection by training models on known-good trajectories to identify statistically improbable position jumps, unauthorized trajectory deviation monitoring comparing real-time flight paths against mission plans, and predictive security alerts using recurrent neural networks (RNNs) or transformer architectures to predict potential failures based on telemetry patterns.
+
+\subsection{Post-Quantum Cryptography}
+
+Current ECC-based signature schemes (ECDSA) and hash functions (SHA-256) remain secure against classical computers but may become vulnerable to quantum attacks via Shor's and Grover's algorithms. Migrating to post-quantum cryptographic primitives would future-proof the system by replacing ECDSA with lattice-based (Dilithium, Falcon) or hash-based (SPHINCS+) signatures that resist quantum cryptanalysis, evaluating quantum-resistant alternatives to SHA-256 such as SHA-3, and implementing hybrid approaches that combine classical and post-quantum schemes during a transition period ensuring backward compatibility.
+
+\subsection{Cross-Domain Applications and Regulatory Engagement}
+
+The lightweight PoH authentication model generalizes beyond UAVs to diverse cyber-physical systems including autonomous vehicles for securing odometry and driving decision logs, industrial IoT for guaranteeing SCADA telemetry integrity in critical infrastructure, and medical devices for protecting patient monitoring logs from unauthorized modification. Accelerating industry adoption requires collaboration with aviation authorities through FAA/EASA certification studies, UTM integration embedding PoH verification nodes into UAS Traffic Management infrastructure, and field trials with commercial drone operators to provide invaluable real-world performance data.
 
 \section{Conclusion}
 
