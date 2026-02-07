@@ -1,11 +1,11 @@
-# Paper Expansion Summary
+# Paper Expansion and Formatting Summary
 
 ## Overview
-The research paper "A Lightweight and Practical UAV Authentication System Implementation based on Proof-of-History Blockchain" has been successfully expanded from **18 pages to 22 pages** as requested.
+The research paper "A Lightweight and Practical UAV Authentication System Implementation based on Proof-of-History Blockchain" has been successfully expanded from **18 pages to 24 pages** and formatting issues have been resolved.
 
 ## File Modified
 - **Main LaTeX File:** `elsarticle-template-num.tex`
-- **Output PDF:** `elsarticle-template-num.pdf` (22 pages)
+- **Output PDF:** `elsarticle-template-num.pdf` (24 pages)
 
 ## Changes Made
 
@@ -14,7 +14,15 @@ The research paper "A Lightweight and Practical UAV Authentication System Implem
 - Changed "Telemetry Processing & Throughput" to "Telemetry Processing and Throughput"
 - Changed "Data Tampering & Detection" to "Data Tampering and Detection"
 
-### 2. New Content Added (approximately 4 pages of new material)
+### 2. Table Formatting Fix (February 2026)
+- **Fixed table overflow issue:** The "Performance Comparison Across Authentication Architectures" table was exceeding the right margin by 22.79pt
+- **Solution applied:**
+  - Added `\small` command to reduce table font size
+  - Changed first column from `|l|` to `|p{3.2cm}|` for fixed-width column with text wrapping
+  - Table now fits perfectly within page margins
+- **Verification:** Overfull box warning at lines 403-420 eliminated
+
+### 3. Content Expansion from 22 to 24 Pages (approximately 2 pages of new material)
 
 #### Performance Evaluation Section - New Subsections:
 1. **Comparative Analysis with Traditional Approaches**
@@ -34,7 +42,7 @@ The research paper "A Lightweight and Practical UAV Authentication System Implem
    - Regulatory compliance and UTM integration
 
 #### New Major Section: Discussion
-Added comprehensive discussion section with four subsections:
+Expanded comprehensive discussion section with additional subsections:
 
 1. **Security Model and Trust Assumptions**
    - Analysis of trust model shift from "trust the operator" to "trust the mathematics"
@@ -55,13 +63,24 @@ Added comprehensive discussion section with four subsections:
    - Recovery mechanisms and forensic tooling needs
    - Adaptive PoH for resource-constrained scenarios
 
+5. **Economic and Operational Considerations** (NEW)
+   - Cost-benefit analysis of PoH deployment
+   - Integration costs, computational resources, storage overhead
+   - Regulatory compliance benefits and liability reduction
+   - Operational workflow integration principles
+
+6. **Ethical and Societal Implications** (NEW)
+   - Surveillance and accountability considerations
+   - Data ownership and control questions
+   - Privacy protections and policy frameworks
+
 #### New Major Section: Future Work
-Consolidated section covering:
-- Decentralized PoH Networks using DAG structures
-- AI-Driven Anomaly Detection capabilities
-- Quantum-Resistant Cryptography migration
-- Cross-Domain Applications (autonomous vehicles, industrial IoT, medical devices)
-- Regulatory Pilot Programs with aviation authorities
+Significantly expanded section covering:
+- **Decentralized PoH Networks:** Detailed discussion of DAG structures, gossiping protocols, Byzantine Fault Tolerance, and hierarchical timestamping
+- **AI-Driven Anomaly Detection:** GPS spoofing detection, trajectory deviation monitoring, and predictive security alerts using RNNs and transformers
+- **Post-Quantum Cryptography:** Migration strategies for lattice-based and hash-based signatures, quantum-resistant hash functions, and hybrid approaches
+- **Cross-Domain Applications:** Autonomous vehicles, industrial IoT, and medical devices
+- **Regulatory Pilot Programs:** FAA/EASA certification studies, UTM integration, and field trials
 
 #### New Major Section: Conclusion
 - Comprehensive summary of key contributions
@@ -88,14 +107,15 @@ The paper compiles successfully with `pdflatex`:
 pdflatex elsarticle-template-num.tex
 ```
 
-Final output: **22 pages** (verified)
+Final output: **24 pages** (verified with pdfinfo)
 
 ## Quality Improvements
 - All sections maintain academic writing standards
 - New content integrates seamlessly with existing material
 - Proper figure and table references
 - Consistent formatting throughout
-- No compilation errors or warnings (except standard reference warnings that resolve on second compilation)
+- Table formatting fixed to fit within page margins
+- No compilation errors or warnings (except minor paragraph overflow warnings that don't affect readability)
 
 ## Notes
 - The paper uses the Elsevier `elsarticle` document class
