@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.7)  7 FEB 2026 20:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.7)  7 FEB 2026 20:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -179,29 +179,7 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(./elsarticle-template-num.aux
-
-LaTeX Warning: Label `sec1' multiply defined.
-
-
-LaTeX Warning: Label `subsec1' multiply defined.
-
-
-LaTeX Warning: Label `subsec1' multiply defined.
-
-
-LaTeX Warning: Label `subsec1' multiply defined.
-
-
-LaTeX Warning: Label `sec1' multiply defined.
-
-
-LaTeX Warning: Label `subsec1' multiply defined.
-
-
-LaTeX Warning: Label `subsec1' multiply defined.
-
-)
+(./elsarticle-template-num.aux)
 \openout1 = `elsarticle-template-num.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
@@ -218,7 +196,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
 \scratchdimen=\dimen157
@@ -371,16 +350,12 @@ ig-i-tal DNA. Whether
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 4399 strings out of 476182
- 65481 string characters out of 5795596
+ 4406 strings out of 476182
+ 65550 string characters out of 5795596
  1933975 words of memory out of 5000000
- 26343 multiletter control sequences out of 15000+600000
+ 26350 multiletter control sequences out of 15000+600000
  566567 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,9n,79p,1141b,297s stack positions out of 10000i,1000n,20000p,200000b,200000s

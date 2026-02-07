@@ -174,11 +174,11 @@ Our main contributions are:
 
 \section{Related Work}
 The field of UAV security is diverse, covering authentication, blockchain integration, and forensic integrity. This section provides a detailed review of 28 key studies, analyzing their contributions and how our work addresses the gaps they leave behind.
-\label{sec1}
+\label{sec2}
 
 %% Use \subsection commands to start a subsection.
 \subsection{Authentication and Intrusion Detection}
-\label{subsec1}
+\label{subsec2-1}
 
 Authentication is the foundational layer of UAV security. Recent research has focused heavily on making authentication "lightweight" to fit on constrained hardware. Rahman et al. [6] proposed an access control protocol specifically designed to defend against anomaly-based intrusions. Their work emphasizes that security mechanisms must not overwhelm the drone's processor, a principle that guides our own design. Similarly, Yu et al. [7] introduced "RLBA-UAV," a robust authentication scheme using Physical Unclonable Functions (PUFs). While PUFs offer excellent hardware-level security, they require specific manufacturing capabilities. Our work complements this by offering a software-based alternative that works on Commercial Off-The-Shelf (COTS) hardware.
 
@@ -186,14 +186,14 @@ Authentication is the foundational layer of UAV security. Recent research has fo
 In complex network environments, authentication becomes even harder. Deng et al. [8] explored how covert channels can be used for reliable authentication in UAV-assisted Radio Access Networks (RANs), protecting against sophisticated attackers who might try to hide their presence. Moving to the cellular domain, Yang and Lin [9] investigated mutual authentication between aerial base stations and the core network. They found that 5G-style handover authentication is necessary for mobile UAVs. For physical layer security, Lin and Wu [10] utilized RF fingerprinting, using the unique hardware "signature" of a drone's radio to identify it. While effective, RF fingerprinting can be unreliable in noisy environments, which is why we favor cryptographic methods.
 
 \subsection{Blockchain for Coordination and Management}
-\label{subsec1}
+\label{subsec2-2}
 Blockchain has been widely adopted to solve the "centralization" problem. Xie et al. [11] introduced "B-UAVM," a blockchain-supported task management scheme. By recording task assignments on a ledger, they ensured that no single drone could lie about its mission status. Alkadi and Shoufan [12] applied similar logic to Traffic Management (UTM), using blockchain to secure crowd-sensing data. This ensures that flight path data shared between operators is trustworthy.
 
 
 Data collection itself requires protection. Pu et al. [13] proposed "SecureIoD," a mechanism for securing data storage in the Internet of Drones. Their work highlights the storage overhead of blockchain, which we mitigate using our lightweight PoH ledger. Economic models also drive blockchain adoption; Erel-Ozcevik [14] proposed "UAV-Coin" to monetize UAV services, while Xu et al. [15] focused on secure content delivery in vehicular networks. These transactional models prove blockchain's utility but often ignore the high-frequency telemetry that is critical for flight safety.
 
 \subsection{Spectrum Management and Advanced Applications}
-\label{subsec1}
+\label{subsec2-3}
 As UAVs crowd the skies, managing radio spectrum becomes critical. Cuellar et al. [16] proposed "BSM-6G," a blockchain system for dynamic spectrum management. This ensures that drones don't interfere with each other's control links. Thompson et al. [17] discussed best practices for sensor integration, which is relevant because garbage data in (from bad sensors) leads to garbage data on the blockchain.
 
 
@@ -202,19 +202,19 @@ Emerging technologies like Large Language Models (LLMs) are also entering the ed
 
 Specific applications continue to emerge. Al Mamun et al. [21] developed "UAVSpectrumChain" for credible spectrum trading, and Wang et al. [22] expanded this to dynamic sharing in 6G. These works show that blockchain is mature enough for complex resource trading. Privacy is the next frontier; Sparer et al. [23] emphasized privacy-preserving verification, ensuring that while we verify the drone, we don't leak its exact mission details to the public.
 \subsection{Infrastructure and Swarm Protocols}
-\label{subsec1}
+\label{subsec2-4}
 The underlying infrastructure determines viability. Akhtar et al. [24] proposed self-sovereign identity for UAV swarms, moving away from central servers entirely. Ali et al. [25] integrated Gen3 blockchains into energy markets, showing how drones could autonomously pay for charging. However, these distributed systems struggle with the "Oracle Problem"—getting real-world data onto the chain reliably. Xian et al. [26] proposed a distributed oracle scheme to solve this, but it introduces latency.
 
 
 Our implementation relies on practical tools. Kartuzov et al. [27] benchmarked the Windows Subsystem for Linux (WSL) for cloud computing, validating our choice of using WSL for our simulation testbed. Finally, Dad et al. [28] analyzed the MAVLink protocol, the standard language of drones. They found it lacks native security, making it vulnerable to the exact attacks our system prevents.
 
 \section{System Architecture}
-\label{sec1}
+\label{sec3}
 
 The proposed system is designed to establish secure authentication and verifiable data integrity for UAVs by integrating a local Proof-of-History (PoH) mechanism with a lightweight cryptographic handshake. The architecture follows a service-oriented approach, ensuring that authentication, telemetry logging, and verification operate cohesively without blocking real-time flight operations.
 
 \subsection{Overall System Design}
-\label{subsec1}
+\label{subsec3-1}
 The framework consists of three primary components: the UAV Client (simulated via AirSim and PX4), the Ground Control Station (GCS), and the PoH Engine.
 
 \begin{itemize}
@@ -235,7 +235,7 @@ The framework consists of three primary components: the UAV Client (simulated vi
 \end{figure}
 
 \subsection{Proof-of-History Sequence Generator}
-\label{subsec1}
+\label{subsec3-2}
 The core innovation of this system is the PoH engine. Instead of relying on a network of miners to timestamp events (which is too slow for drones), the engine uses a sequential hashing function. The output of the current hash depends strictly on the output of the previous hash, creating a chain that cannot be parallelized or forged.
 
 The cryptographic operation for generating the $i$-th block in the chain is defined as:
