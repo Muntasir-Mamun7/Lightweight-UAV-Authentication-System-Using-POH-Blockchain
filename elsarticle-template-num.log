@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.7)  7 FEB 2026 21:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.9)  9 FEB 2026 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -256,15 +256,26 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+<Fig/graphical_abstract.png, id=1, 1004.553pt x 570.933pt>
+File: Fig/graphical_abstract.png Graphic file (type png)
+<use Fig/graphical_abstract.png>
+Package pdftex.def Info: Fig/graphical_abstract.png  used on input line 119.
+(pdftex.def)             Requested size: 390.0pt x 221.6524pt.
+
+Overfull \hbox (6.68224pt too wide) in paragraph at lines 124--125
+[]\T1/cmr/m/n/12 A lightweight Proof-of-History blockchain ar-chi-tec-ture achi
+ev-ing tamper-
+ []
+
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Fig/graphical_abstract.p
+ng>] [2
 
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 139
 .
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 139
@@ -277,19 +288,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [2] [3] [4]
 [5]
-<Fig/Fig1.png, id=31, 3989.90625pt x 3318.3975pt>
+<Fig/Fig1.png, id=34, 3989.90625pt x 3318.3975pt>
 File: Fig/Fig1.png Graphic file (type png)
 <use Fig/Fig1.png>
 Package pdftex.def Info: Fig/Fig1.png  used on input line 231.
 (pdftex.def)             Requested size: 390.0pt x 324.31464pt.
  [6 <./Fig/Fig1.png>]
-<Fig/Fig2.png, id=38, 4751.7525pt x 2598.70876pt>
+<Fig/Fig2.png, id=40, 4751.7525pt x 2598.70876pt>
 File: Fig/Fig2.png Graphic file (type png)
 <use Fig/Fig2.png>
 Package pdftex.def Info: Fig/Fig2.png  used on input line 259.
 (pdftex.def)             Requested size: 390.0pt x 213.2541pt.
  [7 <./Fig/Fig2.png>]
-<Fig/Fig3.png, id=49, 4516.875pt x 3733.95pt>
+<Fig/Fig3.png, id=51, 4516.875pt x 3733.95pt>
 File: Fig/Fig3.png Graphic file (type png)
 <use Fig/Fig3.png>
 Package pdftex.def Info: Fig/Fig3.png  used on input line 281.
@@ -298,7 +309,7 @@ Package pdftex.def Info: Fig/Fig3.png  used on input line 281.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Fig/Fig4.png, id=50, 4818.0pt x 2927.93875pt>
+<Fig/Fig4.png, id=52, 4818.0pt x 2927.93875pt>
 File: Fig/Fig4.png Graphic file (type png)
 <use Fig/Fig4.png>
 Package pdftex.def Info: Fig/Fig4.png  used on input line 301.
@@ -319,7 +330,7 @@ y` and `/api/verify`
  []
 
 [11] [12]
-<Fig/Fig5.png, id=70, 2119.92pt x 1156.32pt>
+<Fig/Fig5.png, id=72, 2119.92pt x 1156.32pt>
 File: Fig/Fig5.png Graphic file (type png)
 <use Fig/Fig5.png>
 Package pdftex.def Info: Fig/Fig5.png  used on input line 378.
@@ -384,10 +395,10 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4650 strings out of 476182
- 67996 string characters out of 5795596
+ 4657 strings out of 476182
+ 68226 string characters out of 5795596
  1934975 words of memory out of 5000000
- 26586 multiletter control sequences out of 15000+600000
+ 26593 multiletter control sequences out of 15000+600000
  572435 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,10n,79p,1133b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -408,10 +419,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on elsarticle-template-num.pdf (24 pages, 2214198 bytes).
+Output written on elsarticle-template-num.pdf (24 pages, 2447556 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
+ 566 PDF objects out of 1000 (max. 8388607)
  116 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
