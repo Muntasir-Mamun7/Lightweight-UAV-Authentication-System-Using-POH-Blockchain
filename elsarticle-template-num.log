@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.10)  10 FEB 2026 07:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.10)  10 FEB 2026 07:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -259,11 +259,11 @@ e
 <Fig/graphical_abstract (2).png, id=1, 3139.22812pt x 1784.16562pt>
 File: Fig/graphical_abstract (2).png Graphic file (type png)
 <use Fig/graphical_abstract (2).png>
-Package pdftex.def Info: Fig/graphical_abstract (2).png  used on input line 136
+Package pdftex.def Info: Fig/graphical_abstract (2).png  used on input line 141
 .
 (pdftex.def)             Requested size: 390.0pt x 221.63173pt.
 
-Overfull \hbox (6.68224pt too wide) in paragraph at lines 141--142
+Overfull \hbox (6.68224pt too wide) in paragraph at lines 146--147
 []\T1/cmr/m/n/12 A lightweight Proof-of-History blockchain ar-chi-tec-ture achi
 ev-ing tamper-
  []
@@ -274,20 +274,20 @@ ev-ing tamper-
 2).png (PNG copy)>] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 156
+LaTeX Font Info:    Trying to load font information for U+msa on input line 161
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 156
+LaTeX Font Info:    Trying to load font information for U+msb on input line 161
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-56.
+61.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -299,7 +299,7 @@ File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 <Fig/Fig1.png, id=38, 3989.90625pt x 3318.3975pt>
 File: Fig/Fig1.png Graphic file (type png)
 <use Fig/Fig1.png>
-Package pdftex.def Info: Fig/Fig1.png  used on input line 248.
+Package pdftex.def Info: Fig/Fig1.png  used on input line 253.
 (pdftex.def)             Requested size: 390.0pt x 324.31464pt.
 
 
@@ -308,7 +308,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <Fig/Fig2.png, id=40, 4751.7525pt x 2598.70876pt>
 File: Fig/Fig2.png Graphic file (type png)
 <use Fig/Fig2.png>
-Package pdftex.def Info: Fig/Fig2.png  used on input line 276.
+Package pdftex.def Info: Fig/Fig2.png  used on input line 281.
 (pdftex.def)             Requested size: 390.0pt x 213.2541pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -317,7 +317,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <Fig/Fig3.png, id=53, 4516.875pt x 3733.95pt>
 File: Fig/Fig3.png Graphic file (type png)
 <use Fig/Fig3.png>
-Package pdftex.def Info: Fig/Fig3.png  used on input line 298.
+Package pdftex.def Info: Fig/Fig3.png  used on input line 303.
 (pdftex.def)             Requested size: 390.0pt x 322.3669pt.
 
 
@@ -327,14 +327,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <Fig/Fig4.png, id=58, 4818.0pt x 2927.93875pt>
 File: Fig/Fig4.png Graphic file (type png)
 <use Fig/Fig4.png>
-Package pdftex.def Info: Fig/Fig4.png  used on input line 318.
+Package pdftex.def Info: Fig/Fig4.png  used on input line 323.
 (pdftex.def)             Requested size: 390.0pt x 236.96516pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9 <./Fig/Fig3.png>] [10 <./Fig/Fig4.png>]
-Overfull \hbox (6.37355pt too wide) in paragraph at lines 355--356
+Overfull \hbox (6.37355pt too wide) in paragraph at lines 360--361
 \T1/cmr/m/n/12 su-al-ize the ledger. It polls the API end-points `/api/telemetr
 y` and `/api/verify`
  []
@@ -343,29 +343,29 @@ y` and `/api/verify`
 <Fig/Fig5.png, id=75, 2119.92pt x 1156.32pt>
 File: Fig/Fig5.png Graphic file (type png)
 <use Fig/Fig5.png>
-Package pdftex.def Info: Fig/Fig5.png  used on input line 395.
+Package pdftex.def Info: Fig/Fig5.png  used on input line 400.
 (pdftex.def)             Requested size: 390.0pt x 212.71605pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
+Underfull \hbox (badness 10000) in paragraph at lines 434--434
 []\T1/cmr/m/n/10.95 Computational
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--431
+Underfull \hbox (badness 10000) in paragraph at lines 436--436
 []\T1/cmr/m/n/10.95 Single Point of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--433
+Underfull \hbox (badness 10000) in paragraph at lines 438--438
 []\T1/cmr/m/n/10.95 Throughput
  []
 
 
-Underfull \hbox (badness 2418) in paragraph at lines 435--435
+Underfull \hbox (badness 2418) in paragraph at lines 440--440
 []\T1/cmr/m/n/10.95 Energy Con-sump-
  []
 
@@ -373,31 +373,31 @@ Underfull \hbox (badness 2418) in paragraph at lines 435--435
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13] [14 <./Fig/Fig5.png (PNG copy)>]
-Overfull \hbox (2.4411pt too wide) in paragraph at lines 463--464
+Overfull \hbox (2.4411pt too wide) in paragraph at lines 468--469
 \T1/cmr/m/n/12 sur-ance au-di-tors). These en-ti-ties main-tain lightweight ver
 -i-fi-ca-tion nodes
  []
 
 [15] [16] [17]
-Overfull \hbox (4.14256pt too wide) in paragraph at lines 500--501
+Overfull \hbox (4.14256pt too wide) in paragraph at lines 505--506
 \T1/cmr/m/n/12 teleme-try logs, which at-tack-ers might ma-nip-u-late be-fore a
 nal-y-sis, PoH-verified
  []
 
 
-Overfull \hbox (6.02148pt too wide) in paragraph at lines 504--505
+Overfull \hbox (6.02148pt too wide) in paragraph at lines 509--510
 []\T1/cmr/m/n/12 Current ECC-based sig-na-ture schemes (ECDSA) and hash func-ti
 ons (SHA-
  []
 
 
-Overfull \hbox (16.72966pt too wide) in paragraph at lines 504--505
+Overfull \hbox (16.72966pt too wide) in paragraph at lines 509--510
 \T1/cmr/m/n/12 (SPHINCS+) sig-na-tures that re-sist quan-tum crypt-anal-y-sis, 
 eval-u-at-ing quantum-
  []
 
 [18]
-Overfull \hbox (5.70055pt too wide) in paragraph at lines 520--521
+Overfull \hbox (5.70055pt too wide) in paragraph at lines 525--526
 \T1/cmr/m/n/12 graph-i-cally unim-peach-able flight record em-bed-ded in its di
 g-i-tal DNA. Whether
  []
@@ -409,13 +409,13 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4676 strings out of 476182
- 68445 string characters out of 5795595
+ 4677 strings out of 476182
+ 68453 string characters out of 5795595
  1934975 words of memory out of 5000000
- 26607 multiletter control sequences out of 15000+600000
+ 26608 multiletter control sequences out of 15000+600000
  575902 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,10n,79p,1133b,382s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,10n,79p,1133b,380s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.60
 0pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.
 600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt120
@@ -437,9 +437,9 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on elsarticle-template-num.pdf (24 pages, 2670185 bytes).
+Output written on elsarticle-template-num.pdf (24 pages, 2670708 bytes).
 PDF statistics:
- 623 PDF objects out of 1000 (max. 8388607)
+ 625 PDF objects out of 1000 (max. 8388607)
  131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
