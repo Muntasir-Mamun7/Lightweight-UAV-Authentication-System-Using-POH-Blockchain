@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.9)  9 FEB 2026 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.10)  10 FEB 2026 07:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -259,11 +259,11 @@ e
 <Fig/graphical_abstract (2).png, id=1, 3139.22812pt x 1784.16562pt>
 File: Fig/graphical_abstract (2).png Graphic file (type png)
 <use Fig/graphical_abstract (2).png>
-Package pdftex.def Info: Fig/graphical_abstract (2).png  used on input line 119
+Package pdftex.def Info: Fig/graphical_abstract (2).png  used on input line 136
 .
 (pdftex.def)             Requested size: 390.0pt x 221.63173pt.
 
-Overfull \hbox (6.68224pt too wide) in paragraph at lines 124--125
+Overfull \hbox (6.68224pt too wide) in paragraph at lines 141--142
 []\T1/cmr/m/n/12 A lightweight Proof-of-History blockchain ar-chi-tec-ture achi
 ev-ing tamper-
  []
@@ -274,118 +274,130 @@ ev-ing tamper-
 2).png (PNG copy)>] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 139
+LaTeX Font Info:    Trying to load font information for U+msa on input line 156
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 139
+LaTeX Font Info:    Trying to load font information for U+msb on input line 156
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+56.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [1
 
 
 ] [2] [3] [4]
 [5]
-<Fig/Fig1.png, id=32, 3989.90625pt x 3318.3975pt>
+<Fig/Fig1.png, id=38, 3989.90625pt x 3318.3975pt>
 File: Fig/Fig1.png Graphic file (type png)
 <use Fig/Fig1.png>
-Package pdftex.def Info: Fig/Fig1.png  used on input line 231.
+Package pdftex.def Info: Fig/Fig1.png  used on input line 248.
 (pdftex.def)             Requested size: 390.0pt x 324.31464pt.
- [6 <./Fig/Fig1.png>]
-<Fig/Fig2.png, id=39, 4751.7525pt x 2598.70876pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Fig/Fig2.png, id=40, 4751.7525pt x 2598.70876pt>
 File: Fig/Fig2.png Graphic file (type png)
 <use Fig/Fig2.png>
-Package pdftex.def Info: Fig/Fig2.png  used on input line 259.
+Package pdftex.def Info: Fig/Fig2.png  used on input line 276.
 (pdftex.def)             Requested size: 390.0pt x 213.2541pt.
- [7 <./Fig/Fig2.png>]
-<Fig/Fig3.png, id=50, 4516.875pt x 3733.95pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6] [7 <./Fig/Fig1.png>]
+<Fig/Fig3.png, id=53, 4516.875pt x 3733.95pt>
 File: Fig/Fig3.png Graphic file (type png)
 <use Fig/Fig3.png>
-Package pdftex.def Info: Fig/Fig3.png  used on input line 281.
+Package pdftex.def Info: Fig/Fig3.png  used on input line 298.
 (pdftex.def)             Requested size: 390.0pt x 322.3669pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Fig/Fig4.png, id=51, 4818.0pt x 2927.93875pt>
+[8 <./Fig/Fig2.png>]
+<Fig/Fig4.png, id=58, 4818.0pt x 2927.93875pt>
 File: Fig/Fig4.png Graphic file (type png)
 <use Fig/Fig4.png>
-Package pdftex.def Info: Fig/Fig4.png  used on input line 301.
+Package pdftex.def Info: Fig/Fig4.png  used on input line 318.
 (pdftex.def)             Requested size: 390.0pt x 236.96516pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8] [9 <./Fig/Fig3.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-18.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [10 <./Fig/Fig4.png>]
-Overfull \hbox (6.37355pt too wide) in paragraph at lines 338--339
+[9 <./Fig/Fig3.png>] [10 <./Fig/Fig4.png>]
+Overfull \hbox (6.37355pt too wide) in paragraph at lines 355--356
 \T1/cmr/m/n/12 su-al-ize the ledger. It polls the API end-points `/api/telemetr
 y` and `/api/verify`
  []
 
 [11] [12]
-<Fig/Fig5.png, id=71, 2119.92pt x 1156.32pt>
+<Fig/Fig5.png, id=75, 2119.92pt x 1156.32pt>
 File: Fig/Fig5.png Graphic file (type png)
 <use Fig/Fig5.png>
-Package pdftex.def Info: Fig/Fig5.png  used on input line 378.
+Package pdftex.def Info: Fig/Fig5.png  used on input line 395.
 (pdftex.def)             Requested size: 390.0pt x 212.71605pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--412
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
 []\T1/cmr/m/n/10.95 Computational
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--414
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
 []\T1/cmr/m/n/10.95 Single Point of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--416
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
 []\T1/cmr/m/n/10.95 Throughput
  []
 
 
-Underfull \hbox (badness 2418) in paragraph at lines 418--418
+Underfull \hbox (badness 2418) in paragraph at lines 435--435
 []\T1/cmr/m/n/10.95 Energy Con-sump-
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13 <./Fig/Fig5.png (PNG copy)>] [14]
-Overfull \hbox (2.4411pt too wide) in paragraph at lines 446--447
+[13] [14 <./Fig/Fig5.png (PNG copy)>]
+Overfull \hbox (2.4411pt too wide) in paragraph at lines 463--464
 \T1/cmr/m/n/12 sur-ance au-di-tors). These en-ti-ties main-tain lightweight ver
 -i-fi-ca-tion nodes
  []
 
 [15] [16] [17]
-Overfull \hbox (4.14256pt too wide) in paragraph at lines 483--484
+Overfull \hbox (4.14256pt too wide) in paragraph at lines 500--501
 \T1/cmr/m/n/12 teleme-try logs, which at-tack-ers might ma-nip-u-late be-fore a
 nal-y-sis, PoH-verified
  []
 
 
-Overfull \hbox (6.02148pt too wide) in paragraph at lines 487--488
+Overfull \hbox (6.02148pt too wide) in paragraph at lines 504--505
 []\T1/cmr/m/n/12 Current ECC-based sig-na-ture schemes (ECDSA) and hash func-ti
 ons (SHA-
  []
 
 
-Overfull \hbox (16.72966pt too wide) in paragraph at lines 487--488
+Overfull \hbox (16.72966pt too wide) in paragraph at lines 504--505
 \T1/cmr/m/n/12 (SPHINCS+) sig-na-tures that re-sist quan-tum crypt-anal-y-sis, 
 eval-u-at-ing quantum-
  []
 
 [18]
-Overfull \hbox (5.70055pt too wide) in paragraph at lines 503--504
+Overfull \hbox (5.70055pt too wide) in paragraph at lines 520--521
 \T1/cmr/m/n/12 graph-i-cally unim-peach-able flight record em-bed-ded in its di
 g-i-tal DNA. Whether
  []
@@ -397,34 +409,38 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4657 strings out of 476182
- 68254 string characters out of 5795596
+ 4676 strings out of 476182
+ 68445 string characters out of 5795595
  1934975 words of memory out of 5000000
- 26593 multiletter control sequences out of 15000+600000
- 572435 words of font info for 72 fonts, out of 8000000 for 9000
+ 26607 multiletter control sequences out of 15000+600000
+ 575902 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,10n,79p,1133b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,10n,79p,1133b,382s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.60
 0pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.
 600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt120
-0.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1
-000.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ect
-i1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-cti1000.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecrm1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/
-ec/tcrm1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappe
-n/ec/ecbx1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on elsarticle-template-num.pdf (24 pages, 2648949 bytes).
+0.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1
+000.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
+m1000.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+cti1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecti1000.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecti0700.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecrm0800.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/tcrm1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecrm1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecbx1200.600pk> </home/runner/.texlive2023/texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on elsarticle-template-num.pdf (24 pages, 2670185 bytes).
 PDF statistics:
- 565 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 623 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
