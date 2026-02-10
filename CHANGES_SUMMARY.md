@@ -73,3 +73,9 @@ pandoc -s elsarticle-template-num.tex -o elsarticle-template-num.docx
 pandoc -s manuscript-without-author-details.tex -o manuscript-without-author-details.docx
 pandoc -s title-page-with-author-details.tex -o title-page-with-author-details.docx
 ```
+
+## Update (2026-02-10)
+
+All PDF and DOCX files have been regenerated from the corrected .tex sources. Muntasir Al Mamun now correctly displays with affiliation marker **"c"** (College of Overseas Education) instead of "1" in all compiled documents.
+
+See [FIX_SUMMARY.md](FIX_SUMMARY.md) for complete details of the fix.
