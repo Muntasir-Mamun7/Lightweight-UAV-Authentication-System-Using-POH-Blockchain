@@ -1,0 +1,576 @@
+%% 
+%% Copyright 2007-2024 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.3 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+%% $Id: elsarticle-template-num.tex 249 2024-04-06 10:51:24Z rishi $
+%%
+\documentclass[preprint,12pt]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsmath package provides various useful equation environments.
+\usepackage{amsmath}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\journal{Nuclear Physics B}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \affiliation for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%% \fntext[label3]{}
+
+\title{A Lightweight and Practical UAV Authentication System Implementation based on Proof-of-History Blockchain}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \affiliation[label1]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%%
+%% \affiliation[label2]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+
+%% Author details removed for blind review
+
+%% Abstract
+\begin{abstract}
+%% Text of abstract
+The integration of Unmanned Aerial Vehicles (UAVs) into critical sectors is hindered by vulnerabilities in communication security and data integrity. Traditional centralized logging introduces single points of failure, while conventional blockchain solutions (e.g., Proof of Work) impose computational overheads unsuitable for resource-constrained UAVs. This paper presents a lightweight and practical authentication framework based on Proof-of-History (PoH). Unlike distributed consensus mechanisms, our approach utilizes a sequential hashing engine to generate a cryptographically verifiable timeline of flight events, ensuring tamper-evident telemetry without network-heavy synchronization. We implemented a full prototype using Microsoft AirSim and PX4 Software-in-the-Loop (SITL). Experimental results demonstrate that the system achieves high-throughput logging (over 120,000 hashes /second) and minimal authentication latency (12–18 ms). Security analysis confirms resilience against replay attacks and data tampering, proving the system's viability for real-time, secure UAV operations.
+\end{abstract}
+
+%%Graphical abstract
+\begin{graphicalabstract}
+\includegraphics[width=\linewidth]{Fig/graphical_abstract (2).png}
+\end{graphicalabstract}
+
+%%Research highlights
+\begin{highlights}
+\item A lightweight Proof-of-History blockchain architecture achieving tamper-evident UAV telemetry logging without distributed consensus overhead
+\item Production-ready implementation achieving over 120,000 hashes per second with 12-18 ms authentication latency, validated through Microsoft AirSim and PX4 simulation
+\end{highlights}
+
+%% Keywords
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+UAV Security \sep Proof-of-History \sep Blockchain \sep Authentication \sep Telemetry Integrity
+\end{keyword}
+
+\end{frontmatter}
+
+%% Add \usepackage{lineno} before \begin{document} and uncomment 
+%% following line to enable line numbers
+%% \linenumbers
+
+%% main text
+%%
+
+%% Use \section commands to start a section
+\section{Introduction}
+\label{sec1}
+%% Labels are used to cross-reference an item using \ref command.
+
+Unmanned Aerial Vehicles (UAVs) have evolved from niche military instruments into a cornerstone of the modern industrial ecosystem. Their utility now spans logistics, precision agriculture, infrastructure inspection, and disaster relief. As these systems increasingly operate in Beyond Visual Line of Sight (BVLOS) scenarios, relying on complex sensor arrays and autonomous decision-making, the security of their communication links and the integrity of their operational data have become critical concerns. Recent comprehensive surveys by Pandey et al. [1] highlight that while UAV utility is growing, the attack surface is expanding simultaneously, particularly in energy-constrained environments where security often takes a backseat to operational endurance.
+
+The vulnerability of UAVs stems primarily from their reliance on open wireless channels. Without robust protection, these links are susceptible to eavesdropping, jamming, and packet manipulation. Priyadharshini and Balamurugan [2] empirically demonstrated that attackers can easily modify content or induce packet loss in Flying Ad-hoc Networks (FANETs) to disrupt operations. To counter this, trust-based schemes for 5G-connected UAVs, such as those proposed by Su et al. [3], have been developed to secure the link between the drone and the ground station. However, securing the link is only half the battle.
+
+
+The second, and often more insidious, challenge is ensuring the integrity of the history. Traditional UAV architectures rely on centralized Ground Control Stations (GCS) to store flight logs. This creates a single point of failure. If an attacker compromises the GCS, they can alter flight logs to hide evidence of hijacking, modify timestamps to fake mission completion, or delete records entirely. Current lightweight authentication protocols, like the one proposed by Kumar et al. [4], focus on establishing a secure session but do not inherently protect the data after it is stored. Similarly, remote identification systems discussed by Singh et al. [5] ensure that a drone can be identified by ground observers, but they do not provide a cryptographic guarantee that the drone's internal logs remain tamper-proof over time.
+
+
+This lack of "forensic integrity" is a critical gap. In the event of a crash or security incident, investigators rely on flight logs to reconstruct the event. If these logs are stored in a standard mutable database, their validity can be questioned. We need a system where the history of the flight is mathematically locked, such that any attempt to change a past event invalidates the entire record. This concept of tamper-evident logging is essential for accountability.
+
+
+To address this, we propose a UAV security framework based on Proof-of-History (PoH). Unlike traditional blockchain consensus mechanisms (like Proof-of-Work) which are too heavy for UAVs, PoH uses a sequential hashing mechanism to create a verifiable timeline. This paper presents the design, implementation, and evaluation of this system.
+
+
+Our main contributions are:
+\begin{enumerate}
+    \item f{Lightweight PoH Engine:} We implemented a sequential hashing engine that generates a tamper-evident timeline of UAV telemetry, optimized for standard flight controllers.
+    \item {Integrated Authentication:} We combined this with a secure handshake protocol to ensure only authenticated UAVs can write to the ledger.
+    \item {Practical Prototype:} We validated the system using Microsoft AirSim and PX4, proving it works in real-time environments.
+\end{enumerate}
+
+
+\section{Related Work}
+The field of UAV security is diverse, covering authentication, blockchain integration, and forensic integrity. This section provides a detailed review of 28 key studies, analyzing their contributions and how our work addresses the gaps they leave behind.
+\label{sec2}
+
+%% Use \subsection commands to start a subsection.
+\subsection{Authentication and Intrusion Detection}
+\label{subsec2-1}
+
+Authentication is the foundational layer of UAV security. Recent research has focused heavily on making authentication "lightweight" to fit on constrained hardware. Rahman et al. [6] proposed an access control protocol specifically designed to defend against anomaly-based intrusions. Their work emphasizes that security mechanisms must not overwhelm the drone's processor, a principle that guides our own design. Similarly, Yu et al. [7] introduced "RLBA-UAV," a robust authentication scheme using Physical Unclonable Functions (PUFs). While PUFs offer excellent hardware-level security, they require specific manufacturing capabilities. Our work complements this by offering a software-based alternative that works on Commercial Off-The-Shelf (COTS) hardware.
+
+
+In complex network environments, authentication becomes even harder. Deng et al. [8] explored how covert channels can be used for reliable authentication in UAV-assisted Radio Access Networks (RANs), protecting against sophisticated attackers who might try to hide their presence. Moving to the cellular domain, Yang and Lin [9] investigated mutual authentication between aerial base stations and the core network. They found that 5G-style handover authentication is necessary for mobile UAVs. For physical layer security, Lin and Wu [10] utilized RF fingerprinting, using the unique hardware "signature" of a drone's radio to identify it. While effective, RF fingerprinting can be unreliable in noisy environments, which is why we favor cryptographic methods.
+
+\subsection{Blockchain for Coordination and Management}
+\label{subsec2-2}
+Blockchain has been widely adopted to solve the "centralization" problem. Xie et al. [11] introduced "B-UAVM," a blockchain-supported task management scheme. By recording task assignments on a ledger, they ensured that no single drone could lie about its mission status. Alkadi and Shoufan [12] applied similar logic to Traffic Management (UTM), using blockchain to secure crowd-sensing data. This ensures that flight path data shared between operators is trustworthy.
+
+
+Data collection itself requires protection. Pu et al. [13] proposed "SecureIoD," a mechanism for securing data storage in the Internet of Drones. Their work highlights the storage overhead of blockchain, which we mitigate using our lightweight PoH ledger. Economic models also drive blockchain adoption; Erel-Ozcevik [14] proposed "UAV-Coin" to monetize UAV services, while Xu et al. [15] focused on secure content delivery in vehicular networks. These transactional models prove blockchain's utility but often ignore the high-frequency telemetry that is critical for flight safety.
+
+\subsection{Spectrum Management and Advanced Applications}
+\label{subsec2-3}
+As UAVs crowd the skies, managing radio spectrum becomes critical. Cuellar et al. [16] proposed "BSM-6G," a blockchain system for dynamic spectrum management. This ensures that drones don't interfere with each other's control links. Thompson et al. [17] discussed best practices for sensor integration, which is relevant because garbage data in (from bad sensors) leads to garbage data on the blockchain.
+
+
+Emerging technologies like Large Language Models (LLMs) are also entering the edge computing space. Cai et al. [18] explored collaborative frameworks for LLM serving. In the future, LLMs could analyze our PoH logs for anomalies, but they need trustworthy data to start with. AI is already being used for security prediction; Guo [19] utilized Hybrid Convolutional Neural Networks (CNNs) to predict IoT security states. While AI is powerful, it is probabilistic. Our system uses Sandler et al.'s [20] concept of "tamper-evident logs," which provides deterministic, mathematical proof of integrity something AI cannot do alone.
+
+
+Specific applications continue to emerge. Al Mamun et al. [21] developed "UAVSpectrumChain" for credible spectrum trading, and Wang et al. [22] expanded this to dynamic sharing in 6G. These works show that blockchain is mature enough for complex resource trading. Privacy is the next frontier; Sparer et al. [23] emphasized privacy-preserving verification, ensuring that while we verify the drone, we don't leak its exact mission details to the public.
+\subsection{Infrastructure and Swarm Protocols}
+\label{subsec2-4}
+The underlying infrastructure determines viability. Akhtar et al. [24] proposed self-sovereign identity for UAV swarms, moving away from central servers entirely. Ali et al. [25] integrated Gen3 blockchains into energy markets, showing how drones could autonomously pay for charging. However, these distributed systems struggle with the "Oracle Problem"—getting real-world data onto the chain reliably. Xian et al. [26] proposed a distributed oracle scheme to solve this, but it introduces latency.
+
+
+Our implementation relies on practical tools. Kartuzov et al. [27] benchmarked the Windows Subsystem for Linux (WSL) for cloud computing, validating our choice of using WSL for our simulation testbed. Finally, Dad et al. [28] analyzed the MAVLink protocol, the standard language of drones. They found it lacks native security, making it vulnerable to the exact attacks our system prevents.
+
+\section{System Architecture}
+\label{sec3}
+
+The proposed system is designed to establish secure authentication and verifiable data integrity for UAVs by integrating a local Proof-of-History (PoH) mechanism with a lightweight cryptographic handshake. The architecture follows a service-oriented approach, ensuring that authentication, telemetry logging, and verification operate cohesively without blocking real-time flight operations.
+
+\subsection{Overall System Design}
+\label{subsec3-1}
+The framework consists of three primary components: the UAV Client (simulated via AirSim and PX4), the Ground Control Station (GCS), and the PoH Engine.
+
+\begin{itemize}
+    \item{UAV Client:} Responsible for collecting flight data (GPS, altitude, velocity) and signing it with an Elliptic Curve Cryptography (ECC) private key.
+    
+    \item{Ground Control Station (GCS):} Acts as the central coordinator. It receives encrypted telemetry, validates signatures, and forwards authenticated data to the PoH engine.
+    
+    \item{PoH Engine:} A continuously running hashing process that generates the immutable timeline. Unlike distributed blockchains, this engine resides locally on the GCS to minimize network latency, creating a ``verifiable delay function'' that proves the sequence of events.
+\end{itemize}
+
+\begin{figure}[h] % [h] forces the image to try and stay "here"
+    \centering
+    % Replace 'fig1.png' with the EXACT name of your uploaded file
+    \includegraphics[width=\linewidth]{Fig/Fig1.png} 
+    
+    \caption{Overall System Architecture illustrating the data flow between the UAV, Ground Control Station, and the Proof-of-History Engine.}
+    \label{fig:architecture}
+\end{figure}
+
+\subsection{Proof-of-History Sequence Generator}
+\label{subsec3-2}
+The core innovation of this system is the PoH engine. Instead of relying on a network of miners to timestamp events (which is too slow for drones), the engine uses a sequential hashing function. The output of the current hash depends strictly on the output of the previous hash, creating a chain that cannot be parallelized or forged.
+
+The cryptographic operation for generating the $i$-th block in the chain is defined as:
+
+\begin{equation}
+    H_i = \text{SHA256}(H_{i-1} \parallel T_i \parallel D_i)
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $H_{i-1}$ is the hash of the previous block.
+    \item $T_i$ is the precise timestamp of arrival.
+    \item $D_i$ is the serialized telemetry data (or the root hash of a data batch).
+\end{itemize}
+
+This mechanism ensures that any attempt to insert a fake log entry in the past would change the hash $H_k$, which would cascade and invalidate every subsequent hash $H_{k+1} \dots H_n$, making tampering immediately detectable.
+
+\begin{figure}[h]
+    \centering
+    % Make sure you uploaded the image and named it 'fig2.png'
+    \includegraphics[width=\linewidth]{Fig/Fig2.png}
+    \caption{The Proof-of-History Sequential Hashing Process. Each new telemetry event is cryptographically linked to the previous state, creating an unbroken timeline.}
+    \label{fig:poh_process}
+\end{figure}
+
+\subsection{Mutual Authentication Protocol}
+
+To prevent unauthorized devices from injecting data into the PoH ledger, we implemented a mutual authentication protocol. The process uses ECC (Curve secp256r1) due to its high security-to-key-size ratio, which is ideal for bandwidth-constrained UAV links.
+
+The handshake follows a three-step challenge-response procedure:
+
+\begin{enumerate}
+    \item {Request:} The UAV sends a connection request with its ephemeral public key.
+    \item{Challenge:} The GCS generates a random nonce and sends it to the UAV.
+    \item{Response:} The UAV signs the nonce with its stored private key. The GCS verifies the signature against the registered public key.
+\end{enumerate}
+
+Upon successful verification, a session key is derived, and a ``Session Start'' event is immediately hashed into the PoH ledger. This cryptographically binds the secure session to a specific point in the timeline, preventing replay attacks where an attacker might try to re-send an old valid handshake packet.
+
+\begin{figure}[h]
+    \centering
+    % Ensure you have uploaded the image and named it 'fig3.png'
+    \includegraphics[width=\linewidth]{Fig/Fig3.png}
+    \caption{The Mutual Authentication Handshake. Secure sessions are established via ECC challenge-response before any telemetry is logged to the ledger.}
+    \label{fig:auth_handshake}
+\end{figure}
+\subsection{Data Model and Block Format}
+
+The system employs a structured data model to ensure consistency and efficient verification. Each entry in the PoH ledger corresponds to a discrete event either a telemetry update or an authentication exchange recorded as a JSON object.
+
+The block structure consists of three layers:
+\begin{itemize}
+    \item{Transaction Data:} Contains the raw payload, such as GPS coordinates, velocity, or authentication challenge tokens.
+    \item{PoH Metadata:} Includes the \textit{Block Index} ($i$), the \textit{Previous Hash} ($H_{i-1}$), and the \textit{Current Hash} ($H_i$).
+    \item{Security Layer:} Contains the \textit{Timestamp} ($T_i$) and the \textit{Digital Signature} generated by the GCS.
+\end{itemize}
+
+This structure ensures that every block is cryptographically linked to the previous one. As illustrated in Figure \ref{fig:datamodel}, the inclusion of the previous hash in the current block's computation creates an immutable dependency chain, where modifying any historical bit invalidates the entire subsequent ledger.
+
+\begin{figure}[h]
+    \centering
+    
+    \includegraphics[width=\linewidth]{Fig/Fig4.png}
+    \caption{Data Model and Block Structure. Telemetry and authentication data are encapsulated with cryptographic metadata to form the immutable PoH chain.}
+    \label{fig:datamodel}
+\end{figure}
+
+\section{Implementation}
+
+The proposed system was implemented as a fully functional prototype to validate the feasibility of Proof-of-History (PoH) in real-time UAV environments. The implementation integrates a Python-based cryptographic engine with a high-fidelity flight simulation platform.
+
+\subsection{Development Environment}
+The prototype was developed and stress-tested on a workstation equipped with an {Intel Core i5-11400H} processor (2.7 GHz, 6 cores), 16 GB DDR4 RAM, and an NVIDIA GTX 1660 Ti GPU. The software stack runs within the Windows Subsystem for Linux (WSL) running Ubuntu 22.04 LTS, ensuring compatibility with standard Linux networking tools while leveraging Windows drivers for graphical simulation [27].
+
+The core technology stack includes:
+\begin{itemize}
+    \item {Language:} Python 3.11 for all backend logic and cryptographic operations.
+    \item {Framework:} Flask 3.0 for the RESTful API and WebSocket management.
+    \item {Database:} SQLite 3.41 for local persistence of the blockchain ledger and telemetry logs.
+    \item {Cryptography:} \texttt{PyCryptodome} library for Elliptic Curve Cryptography (ECC) and SHA-256 hashing.
+\end{itemize}
+
+\subsection{UAV Simulation Integration}
+To replicate realistic flight dynamics, we integrated \textbf{Microsoft AirSim} with the \textbf{PX4} flight control stack. PX4 (running in Software-in-the-Loop mode) manages the autopilot logic, sensor fusion, and state estimation, while AirSim renders the physics and visual environment.
+
+The UAV client is implemented as a Python script that interfaces with the AirSim API. It captures telemetry data (GPS, velocity, orientation) at a frequency of 20 Hz. This data is serialized, signed with the UAV's private ECC key, and transmitted to the Ground Control Station (GCS) via HTTP POST requests, simulating a secure wireless link [28].
+
+\subsection{PoH Engine Logic}
+The Proof-of-History engine operates as an asynchronous background service. It utilizes a deterministic state machine to process incoming events. To ensure non-blocking performance, the Flask API pushes verified events into a thread-safe queue, which the PoH engine consumes to generate blocks.
+
+The core hashing algorithm is optimized for speed. Upon retrieving an event from the queue, the engine:
+\begin{enumerate}
+    \item Retrieves the hash of the latest block ($H_{last}$).
+    \item Generates a precise reception timestamp ($T_{now}$).
+    \item Computes $H_{new} = \text{SHA256}(H_{last} \parallel T_{now} \parallel \text{EventData})$.
+    \item Commits the new block to the SQLite ledger using a transactional write to ensure atomicity.
+\end{enumerate}
+
+\subsection{Web Dashboard}
+A real-time dashboard was developed using HTML5 and JavaScript to visualize the ledger. It polls the API endpoints `/api/telemetry` and `/api/verify` to update the flight path visualization and display the current blockchain height. This allows operators to visually confirm that telemetry data is being hashed and finalized in real-time.
+
+\section{Performance Evaluation}
+
+The evaluation focuses on three key metrics: authentication latency, PoH throughput, and security resilience. The system was tested under three scenarios: a single UAV baseline, a multi-UAV swarm (5 drones), and a high-load stress test (simulating 20 concurrent streams).
+
+\subsection{Performance Metrics}
+We measured the end-to-end latency from the moment a telemetry packet is generated by the UAV to the moment it is cryptographically finalized in the PoH ledger.
+
+\textbf{1. Authentication Latency:}
+The average time to complete the mutual authentication handshake (including challenge generation, signing, and verification) was measured at \textbf{12--18 ms}. This low overhead confirms that the ECC-based handshake is suitable for session initiation even in time-critical missions.
+
+\textbf{2. Telemetry Processing and Throughput:}
+Under the standard load (20 Hz telemetry from 5 UAVs), the system demonstrated robust performance:
+\begin{itemize}
+    \item \textbf{Ingestion Latency:} The Flask API processed and validated incoming packets in \textbf{6--10 ms} on average.
+    \item \textbf{Block Generation:} The PoH engine maintained a block generation latency of \textbf{$<$3 ms}.
+    \item \textbf{Hashing Throughput:} Stress tests revealed a peak throughput of approximately \textbf{120,000 hashes per second} on the test hardware. This significantly exceeds the data rate required for standard telemetry logging.
+\end{itemize}
+
+\subsection{Security Analysis}
+To validate the integrity guarantees, we simulated three specific attack vectors against the system.
+
+\subsubsection{Impersonation Attacks}
+An adversarial script attempted to initiate a session using a valid UAV ID but an invalid ECC signature. The GCS immediately rejected the request, and critically, no entry was created in the PoH ledger. This ensures that the blockchain only contains data from verified sources.
+
+\subsubsection{Replay Attacks}
+We captured valid telemetry packets and re-transmitted them after a 5-second delay. The system rejected these packets because the embedded timestamp ($T_{packet}$) did not align with the current PoH sequence window. The PoH engine's strictly sequential nature inherently prevents the insertion of stale data.
+
+\subsubsection{Data Tampering and Detection}
+We manually modified a GPS coordinate in the local SQLite database to simulate a compromised storage server (altering altitude from 15m to 5m).
+\begin{itemize}
+    \item \textbf{Result:} When the verification module scanned the chain, it recomputed the hash for the modified block ($H'_{i}$).
+    \item \textbf{Detection:} Since $H'_{i} \neq H_{stored}$, the mismatch caused a validation failure.
+    \item \textbf{Cascade Effect:} Because $H_{i+1}$ depends on $H_{i}$, every subsequent block also failed verification. The dashboard flagged the file as ``TAMPERED'' at the exact index of modification (as shown in Figure \ref{fig:tampering}).
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    % Upload Figure 5.1 from your thesis and name it 'fig5.png'
+    \includegraphics[width=\linewidth]{Fig/Fig5.png}
+    \caption{Tampering Detection Results. The system detected a hash mismatch at Block 4 caused by unauthorized modification of the GPS payload, invalidating the subsequent chain.}
+    \label{fig:tampering}
+\end{figure}
+%% Use \subsubsection, \paragraph, \subparagraph commands to 
+%% start 3rd, 4th and 5th level sections.
+%% Refer following link for more details.
+%% https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands
+
+
+
+
+
+%% Use figure environment to create figures
+%% Refer following link for more details.
+%% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+
+\subsection{Comparative Analysis with Traditional Approaches}
+
+To contextualize our system's performance, we conducted a comparative analysis against traditional centralized logging and conventional blockchain-based solutions. Table \ref{tab:comparison} summarizes the key performance indicators across three paradigms: centralized databases (typical GCS architecture), Proof-of-Work (PoW) blockchain, and our Proof-of-History (PoH) implementation.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Performance Comparison Across Authentication Architectures}
+\label{tab:comparison}
+\begin{tabular}{|p{3.2cm}|c|c|c|}
+\hline
+\textbf{Metric} & \textbf{Centralized} & \textbf{PoW Blockchain} & \textbf{PoH (Ours)} \\
+\hline
+Authentication Latency & 8-12 ms & 150-300 ms & 12-18 ms \\
+\hline
+Tamper Detection & None & High & High \\
+\hline
+Computational Overhead & Low & Very High & Low \\
+\hline
+Single Point of Failure & Yes & No & No \\
+\hline
+Throughput (events/sec) & $>$10,000 & 10-20 & $>$5,000 \\
+\hline
+Energy Consumption & Low & Very High & Low \\
+\hline
+\end{tabular}
+\end{table}
+
+As demonstrated in Table \ref{tab:comparison}, our PoH-based system achieves a practical balance between security guarantees and computational efficiency. While centralized systems offer minimal latency, they provide no cryptographic integrity. Conversely, PoW-based blockchains ensure decentralized tamper-evidence but impose prohibitive computational costs that are incompatible with UAV flight controllers operating under strict power budgets.
+
+Our approach leverages the sequential nature of UAV telemetry streams. Since flight events naturally occur in a temporal sequence, the PoH mechanism aligns perfectly with this characteristic. The authentication latency of 12-18 ms is within acceptable bounds for real-time control systems, where typical control loops operate at 50-100 Hz (10-20 ms cycles).
+
+\subsection{Scalability Evaluation}
+
+To assess scalability for multi-UAV deployments, we stress-tested the system with 20 concurrent UAV connections transmitting at 20 Hz (400 events/second total). The system maintained stable performance with average block finalization of 2.8 ms, queue depth below 15 events, memory footprint of 180 MB, and network bandwidth of 2.3 Mbps. These results demonstrate linear scaling suitable for swarm operations without specialized hardware.
+
+\subsection{Real-World Deployment Considerations}
+
+Transitioning from simulation to real-world deployment introduces practical challenges. For network reliability, local caching mechanisms can buffer telemetry during connectivity loss. Clock synchronization relies on centralized GCS timestamps, with GPS-derived timing or NTP for sub-millisecond accuracy. Storage management is critical: a 10-hour flight at 20 Hz produces approximately 350 MB of data, addressable through periodic checkpointing or compression. Our PoH-based ledger inherently satisfies evolving regulatory requirements for remote identification and flight data recording, facilitating integration with UTM frameworks via standardized APIs (e.g., ASTM F3411-19).
+
+\section{Discussion}
+
+The experimental validation confirms the technical viability of Proof-of-History for UAV authentication and telemetry integrity. However, several broader implications and limitations merit detailed discussion.
+
+\subsection{Security Model and Trust Assumptions}
+
+Our system shifts the trust model from "trust the operator" to "trust the mathematics." In a centralized GCS architecture, the operator has unrestricted access to modify logs. Our PoH ledger eliminates this capability even a privileged administrator cannot alter historical records without detection.
+
+However, this introduces a critical assumption: the integrity of the PoH engine itself. If an attacker gains control of the machine running the GCS, they could halt the PoH process, fork the ledger, or generate an entirely parallel chain. To mitigate this, future iterations could implement:
+
+\begin{itemize}
+    \item \textbf{Distributed Validation:} Periodically broadcasting PoH block headers to multiple independent observers (e.g., regulatory authorities, insurance auditors). These entities maintain lightweight verification nodes that can detect forks.
+    \item \textbf{Hardware Security Modules (HSMs):} Embedding the PoH hashing logic in a tamper-resistant hardware enclave ensures that even a compromised operating system cannot manipulate the ledger.
+    \item \textbf{Publicly Verifiable Checkpoints:} Publishing cryptographic commitments (Merkle tree roots) to a public blockchain at regular intervals. This anchors the private PoH chain to an immutable public ledger without exposing sensitive mission data.
+\end{itemize}
+
+\subsection{Privacy and Operational Security}
+
+Tamper-evident logging presents a double-edged sword. While it provides accountability, it also creates permanent records. The PoH architecture could be augmented with privacy-preserving techniques such as zero-knowledge proofs for verification without revealing mission parameters, selective disclosure for granular access control, or homomorphic encryption for cryptographic verification on encrypted data.
+
+\subsection{Integration with Existing UAV Ecosystems}
+
+Real-world UAV operations rely on established software ecosystems (PX4, ArduPilot, QGroundControl, Mission Planner). Integration challenges include MAVLink compatibility requiring new message types, standardization efforts through bodies like AUVSI or IETF, and developing lightweight middleware for retrofitting existing fleets.
+
+\subsection{Limitations and Future Considerations}
+
+While our implementation demonstrates core principles, several limitations merit acknowledgment. All experiments were conducted in AirSim simulation; real-world deployment must address RF propagation, hardware failures, and environmental conditions. The prototype assumes a single GCS; multi-GCS scenarios require distributed PoH chain extensions. Robust fault recovery mechanisms and comprehensive forensic analysis tools remain essential for production deployment. Additionally, resource-constrained edge scenarios might benefit from adaptive PoH that dynamically adjusts hashing frequency based on available resources.
+
+\subsection{Economic and Operational Considerations}
+
+Beyond technical feasibility, widespread PoH adoption depends on economic incentives and operational practicality. Deploying PoH-based authentication involves several cost factors including initial development integration costs (\$50,000 to \$200,000), minimal computational resources (less than 5\% CPU utilization and 200 MB RAM), and negligible storage overhead (approximately 256 bytes per block). Offsetting these costs are potential benefits such as regulatory compliance satisfaction, liability reduction through cryptographically verifiable logs potentially reducing insurance premiums by 10--15\%, and enhanced trust enabling premium pricing for verified services.
+
+Successful deployment requires seamless integration into existing UAV operational workflows. Key design principles include transparent background operation where PoH hashing occurs without affecting pilot interfaces, graceful degradation ensuring safety-critical functions remain operational if the PoH engine fails, and audit accessibility presenting hash chain validation results in human-readable formats rather than raw cryptographic hashes.
+
+\subsection{Ethical and Societal Implications}
+
+The deployment of tamper-evident telemetry logging in UAV systems raises important ethical considerations. While PoH enhances accountability by preventing operators from retroactively altering flight records, it also creates permanent, immutable surveillance data. This duality requires policy frameworks governing who can access PoH ledgers and under what circumstances. In commercial UAV operations, questions arise about ledger ownership and data control, requiring clear contractual agreements and legal standards defining access rights, retention policies, and subpoena compliance. These questions extend beyond technical implementation and require interdisciplinary collaboration among engineers, legal scholars, ethicists, and policymakers.
+
+\section{Future Work}
+
+Several promising research directions emerge from this foundation, each addressing distinct challenges in UAV security and blockchain scalability.
+
+\subsection{Decentralized PoH Networks}
+
+Extending the single-node PoH architecture to a decentralized network with multiple Ground Control Stations (GCS) presents exciting opportunities for enhanced resilience and cross-validation. In a distributed PoH system, each GCS maintains its own sequential hash chain while periodically synchronizing with peer nodes to verify consistency. This architecture could leverage Directed Acyclic Graph (DAG) structures to enable parallel processing of telemetry streams without sacrificing the temporal ordering guarantees that make PoH valuable. Potential approaches include gossiping protocols where each GCS broadcasts its latest PoH block headers to neighboring nodes, Byzantine Fault Tolerance implementations using lightweight BFT variants (e.g., PBFT, HotStuff), and hierarchical timestamping with designated time authority nodes.
+
+\subsection{AI-Driven Anomaly Detection}
+
+The immutable PoH ledger provides high-integrity datasets ideal for training machine learning models to detect security threats. Unlike traditional telemetry logs, which attackers might manipulate before analysis, PoH-verified data guarantees historical authenticity. This enables deployment of AI-driven anomaly detection systems for GPS spoofing detection by training models on known-good trajectories to identify statistically improbable position jumps, unauthorized trajectory deviation monitoring comparing real-time flight paths against mission plans, and predictive security alerts using recurrent neural networks (RNNs) or transformer architectures to predict potential failures based on telemetry patterns.
+
+\subsection{Post-Quantum Cryptography}
+
+Current ECC-based signature schemes (ECDSA) and hash functions (SHA-256) remain secure against classical computers but may become vulnerable to quantum attacks via Shor's and Grover's algorithms. Migrating to post-quantum cryptographic primitives would future-proof the system by replacing ECDSA with lattice-based (Dilithium, Falcon) or hash-based (SPHINCS+) signatures that resist quantum cryptanalysis, evaluating quantum-resistant alternatives to SHA-256 such as SHA-3, and implementing hybrid approaches that combine classical and post-quantum schemes during a transition period ensuring backward compatibility.
+
+\subsection{Cross-Domain Applications and Regulatory Engagement}
+
+The lightweight PoH authentication model generalizes beyond UAVs to diverse cyber-physical systems including autonomous vehicles for securing odometry and driving decision logs, industrial IoT for guaranteeing SCADA telemetry integrity in critical infrastructure, and medical devices for protecting patient monitoring logs from unauthorized modification. Accelerating industry adoption requires collaboration with aviation authorities through FAA/EASA certification studies, UTM integration embedding PoH verification nodes into UAS Traffic Management infrastructure, and field trials with commercial drone operators to provide invaluable real-world performance data.
+
+\section{Conclusion}
+
+This paper presented a comprehensive design, implementation, and evaluation of a lightweight authentication system for Unmanned Aerial Vehicles based on Proof-of-History blockchain principles. By leveraging sequential cryptographic hashing instead of distributed consensus, our approach achieves the tamper-evidence guarantees of traditional blockchains without imposing prohibitive computational overheads.
+
+Our key contributions include: (1) a production-ready PoH engine optimized for real-time telemetry ingestion, achieving over 120,000 hashes per second on consumer-grade hardware; (2) a mutual authentication protocol using Elliptic Curve Cryptography that completes handshakes in 12-18 milliseconds; and (3) a fully integrated prototype validated through high-fidelity simulation with Microsoft AirSim and PX4 SITL.
+
+Experimental results confirm that the system successfully defends against impersonation, replay, and data tampering attacks while maintaining compatibility with the latency requirements of real-time UAV control systems. Comparative analysis demonstrates that our PoH-based approach occupies a unique position in the design space, offering blockchain-level integrity at near-centralized-database performance.
+
+The broader implications of this work extend beyond UAVs. As cyber-physical systems proliferate across transportation, healthcare, and industrial automation, the need for trustworthy, verifiable operational logs becomes increasingly critical. Proof-of-History offers a pragmatic solution, balancing mathematical rigor with engineering practicality.
+
+Looking forward, we envision a future where every UAV carries a cryptographically unimpeachable flight record embedded in its digital DNA. Whether investigating accidents, auditing regulatory compliance, or simply ensuring mission accountability, stakeholders can trust that the data reflects reality, unaltered and unassailable. This work represents a foundational step toward that vision, and we hope it inspires continued innovation at the intersection of aerospace engineering, cryptography, and distributed systems.
+
+
+
+
+%% If you have bib database file and want bibtex to generate the
+%% bibitems, please use
+%%
+%%  \bibliographystyle{elsarticle-num} 
+%%  \bibliography{<your bibdatabase>}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+%% Refer following link for more details about bibliography and citations.
+%% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+
+%% REFERENCES
+\begin{thebibliography}{00}
+
+\bibitem{1} G. K. Pandey, D. S. Gurjar, S. Yadav, et al., ``UAV-Assisted Communications With RF Energy Harvesting: A Comprehensive Survey,'' \textit{IEEE Commun. Surv. Tutorials}, vol. 27, no. 2, pp. 782-838, 2025.
+
+\bibitem{2} S. Priyadharshini and P. Balamurugan, ``Empirical Analysis of Packet-loss and Content Modification based detection to secure Flying Ad-hoc Networks (FANETs),'' \textit{Int. Conf. on Networking and Comm. (ICNWC)}, 2023, pp. 1-8.
+
+\bibitem{3} Y. Su, J. Zhou, and Z. Guo, ``A Trust-Based Security Scheme for 5G UAV Communication Systems,'' \textit{IEEE Intl Conf on Dependable, Autonomic and Secure Computing}, 2020, pp. 371-374.
+
+\bibitem{4} P. Kumar, B. Mohanraj, E. Munuswamy, et al., ``Blockchain-Based Lightweight Authentication and Key Exchange Protocol For Unmanned Aerial Vehicle,'' \textit{Int. Conf. on New Frontiers in Comm., Auto., Mgmt. and Security (ICCAMS)}, 2023, pp. 1-8.
+
+\bibitem{5} G. Singh, R. A. Pashchapur, A. Pandey, et al., ``Drone Remote Identification System Using Different Wireless COTS Radios: A Benchmarking Study,'' \textit{6th Int. Conf. on Advanced Comm. Tech. and Networking (CommNet)}, 2023, pp. 1-7.
+
+\bibitem{6} K. Rahman, M. A. Khan, F. Afghah, et al., ``An Efficient Authentication and Access Control Protocol for Securing UAV Networks Against Anomaly-Based Intrusion,'' \textit{IEEE Access}, vol. 12, pp. 62750-62764, 2024.
+
+\bibitem{7} S. Yu, A. K. Das, and Y. Park, ``RLBA-UAV: A Robust and Lightweight Blockchain-Based Authentication and Key Agreement Scheme for PUF-Enabled UAVs,'' \textit{IEEE Trans. Intell. Transport. Syst.}, vol. 25, no. 12, pp. 21697-21708, 2024.
+
+\bibitem{8} J. Deng, et al., ``CCRA: Covert Channel-based Reliable Authentication Scheme for UAV-assisted RAN,'' \textit{GLOBECOM 2024}, 2024, pp. 4860--4865.
+
+\bibitem{9} K.-C. Yang and P.-C. Lin, ``Mutual Authentication between Aerial Base Stations and Core Network: A Lightweight Security Scheme,'' \textit{33rd Int. Telecom. Networks and Applications Conf.}, 2023, pp. 11-18.
+
+\bibitem{10} D. Lin and W. Wu, ``Optimization of a Secure UAV-Based IoT: RF-Fingerprint Authentication and Resource Allocation,'' \textit{IEEE Internet Things J.}, vol. 10, no. 21, pp. 19208-19217, 2023.
+
+\bibitem{11} H. Xie, J. Zheng, T. He, et al., ``B-UAVM: A Blockchain-Supported Secure Multi-UAV Task Management Scheme,'' \textit{IEEE Internet Things J.}, vol. 10, no. 24, pp. 21240-21253, 2023.
+
+\bibitem{12} R. Alkadi and A. Shoufan, ``Unmanned Aerial Vehicles Traffic Management Solution Using Crowd-Sensing and Blockchain,'' \textit{IEEE Trans. Netw. Serv. Manage.}, vol. 20, no. 1, pp. 201-215, 2023.
+
+\bibitem{13} C. Pu, A. Wall, I. Ahmed, et al., ``SecureIoD: A Secure Data Collection and Storage Mechanism for Internet of Drones,'' \textit{23rd IEEE Int. Conf. on Mobile Data Management (MDM)}, 2022, pp. 83-92.
+
+\bibitem{14} M. Erel-Ozcevik, ``UAV-Coin: Blockchain assisted UAV as a Service,'' \textit{Innovations in Intelligent Systems and Applications Conf. (ASYU)}, 2022, pp. 1-6.
+
+\bibitem{15} Q. Xu, et al., ``Blockchain-Based Layered Secure Edge Content Delivery in UAV-Assisted Vehicular Networks,'' \textit{IEEE Trans. Veh. Technol.}, vol. 74, no. 5, pp. 7914-7927, 2025.
+
+\bibitem{16} D. Cuellar, M. Sallal, and C. Williams, ``BSM-6G: Blockchain-Based Dynamic Spectrum Management for 6G Networks: Addressing Interoperability and Scalability,'' \textit{IEEE Access}, vol. 12, pp. 59643-59664, 2024.
+
+\bibitem{17} T. Thompson, G. K. Saba, E. Wright-Fairbanks, et al., ``Best Practices for Sea-Bird Scientific deep ISFET-based pH sensor integrated into a Slocum Webb Glider,'' \textit{OCEANS 2021}, 2021, pp. 1-8.
+
+\bibitem{18} F. Cai, D. Yuan, Z. Yang, et al., ``Edge-LLM: A Collaborative Framework for Large Language Model Serving in Edge Computing,'' \textit{IEEE Int. Conf. on Web Services (ICWS)}, 2024, pp. 799-809.
+
+\bibitem{19} Z. Guo, ``Prediction of the IoT Security Situation Utilizing Hybrid Convolutional Neural Network and Long-Short Term Memory,'' \textit{4th Int. Conf. on Mobile Networks and Wireless Comm. (ICMNWC)}, 2024, pp. 1-5.
+
+\bibitem{20} D. Sandler, K. Derr, S. Crosby, et al., ``Finding the Evidence in Tamper-Evident Logs,'' \textit{Third Int. Workshop on Systematic Approaches to Digital Forensic Engineering}, 2008, pp. 69-75.
+
+\bibitem{21} M. Al Mamun, Q. Wang, J. Qian, et al., ``UAVSpectrumChain: Smart-Contract Based Credible Spectrum Trading for UAV Communications,'' \textit{Comm. in Computer and Info. Science}, 2025, pp. 27-37.
+
+\bibitem{22} Q. Wang, M. A. Mamun, X. Ma, et al., ``Blockchain-enabled dynamic credible spectrum sharing in 6G networks,'' \textit{Blockchain}, 2025, pp. 1-18.
+
+\bibitem{23} L. Sparer, et al., ``Efficient Privacy-Preserving Verification of UAV Telemetry Enabling a Resilient Decentralized Advanced Air Mobility System,'' \textit{IEEE 11th Conf. on Big Data Security on Cloud}, 2025, pp. 13-19.
+
+\bibitem{24} T. Akhtar, C. Tselios, P. Nakou, et al., ``Self-Sovereign-Identity Management and On-Boarding Framework for UAV Swarm Environment,'' \textit{IEEE Int. Smart Cities Conf. (ISC2)}, 2025, pp. 1-7.
+
+\bibitem{25} L. Ali, M. I. Azim, J. Peters, et al., ``Integrating Gen3 Blockchain Into a Transactive Energy Market for DERs Orchestration,'' \textit{IEEE Trans. on Ind. Applicat.}, vol. 61, no. 3, pp. 5103-5115, 2025.
+
+\bibitem{26} Y. Xian, L. Zhou, J. Jiang, et al., ``A Distributed Efficient Blockchain Oracle Scheme for Internet of Things,'' \textit{IEICE Trans. Commun.}, vol. E107-B, no. 9, pp. 573-582, 2024.
+
+\bibitem{27} A. Kartuzov, T. Kartuzova, and M. Sirotkina, ``Installing and Configuring Windows Subsystem for Linux in Cloud Computing,'' \textit{Int. Russian Smart Industry Conf.}, 2025, pp. 104-108.
+
+\bibitem{28} U. V. Dad, D. T. Gandhi, D. B. Panchal, et al., ``MAVLink Protocol Customization for UAV Telemetry and Control Over a Low Data Rate SATCOM Link,'' \textit{IEEE 21st India Council Int. Conf. (INDICON)}, 2024, pp. 1-5.
+
+\end{thebibliography}
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-num.tex'.

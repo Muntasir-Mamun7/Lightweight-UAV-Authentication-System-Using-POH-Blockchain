@@ -8,6 +8,10 @@
 *.fls
 *.bbl
 *.blg
+*.spl
+*.nav
+*.snm
+*.vrb
 
 # Python cache
 __pycache__/
